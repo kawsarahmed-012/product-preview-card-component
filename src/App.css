@@ -1,0 +1,126 @@
+img {
+  max-width: 100%;
+}
+
+.card {
+  display: flex;
+  max-width: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.card__image.card__image--desktop {
+  display: block;
+}
+
+.card__image.card__image--mobile {
+  display: none;
+}
+
+.card__description {
+  flex: 0 0 300px;
+  padding: 30px;
+
+  background-color: var(--color-white);
+}
+
+.card__header p {
+  color: var(--color-dark-grayish-blue);
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+}
+
+.card__header h1 {
+  margin: 1.2rem 0 1.5rem;
+
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+  color: var(--color-very-dark-blue);
+}
+
+.card__body {
+  font-size: 0.9rem;
+  color: var(--color-dark-grayish-blue);
+
+  margin-bottom: 1.5rem;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card__price {
+  color: var(--color-dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+}
+
+.card__discount {
+  color: var(--color-dark-grayish-blue);
+  font-size: 0.9rem;
+}
+
+.card__action {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  border: none;
+
+  background-color: var(--color-dark-cyan);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-white);
+  cursor: pointer;
+
+  transition: background-color 200ms;
+}
+
+.card__action:hover {
+  background-color: var(--color-very-dark-cyan);
+}
+
+@media screen and (max-width: 599px) {
+  .card {
+    width: 21.5rem;
+    display: block;
+  }
+
+  .card__image.card__image--mobile {
+    display: block;
+  }
+
+  .card__image.card__image--desktop {
+    display: none;
+  }
+
+  .card__description {
+    padding: 1.5rem;
+  }
+
+  .card__header h1 {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .card__body {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .card__footer {
+    gap: 1rem;
+  }
+
+  .card__action {
+    margin-top: 1rem;
+  }
+}
